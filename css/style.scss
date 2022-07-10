@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/*linear-gradient(45deg, rgba(249, 244, 244,.6)30% , rgba(252, 254, 255,.8) ),url(../img/fondo3.jpeg)*/
 body{
     header{
         img{
@@ -18,7 +17,8 @@ body{
         div{
             width: 100%;
             height: 100vh;
-            border: 5px solid white;
+            background-color: rgba(255, 255, 255,.4);
+            
         }  
         .uno{
             display: flex;
@@ -26,21 +26,43 @@ body{
             align-items: center;
             flex-direction: column;
             background-color: rgba(6, 6, 6,.4);
-            
-            #pUno{
-                color: $colorTexto;
-                font-size: $tamanoFuente + 5;
-                font-family: $fuenteMoonrocks;
+        }
+        p{
+            position: fixed;
+            color: $colorTexto;
+        }
+        #pUno{
+            font-size: $tamanoFuente + 5;
+            font-family: $fuenteMoonrocks;
+            margin-top: -100px;
+        }
+        #pDos{
+            font-size: $tamanoFuente * 2;
+        }
+        #EnlaceAlMenu{
+            margin-top: 80px;
+            background-color:  darken($color: rgba(255, 253, 253, 0.486), $amount: 0);
+            padding: 10px;
+            border-radius: 10px;
+            transition: .3s;
+            &:hover{
+                background-color: darken($color: #000000, $amount: 0);
             }
-            #pDos{
+            a{
+                text-decoration: none;
                 color: $colorTexto;
-                font-size: $tamanoFuente * 2;
+                font-size: $tamanoFuente +.2;
+                border-bottom: 2px solid white;
             }
         }
+        /*------estilos de la pagina menu.html*/
         .dos{
-            background-color: rgb(255, 255, 255);
-            opacity: .6;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255, 253, 253,.4);
         }
+        
     }
 }
