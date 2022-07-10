@@ -1,0 +1,11 @@
+{
+  "name": "proyectolimpieza",
+  "version": "1.0.0",
+  "description": "tienda digital de productos de limpieza hogar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JoseSantiagoVazquez",
+  "license": "ISC"
+}
