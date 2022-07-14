@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*------mapget----*/
 /*---Fuentes-----*/
 /*--tamaños de fuente----*/
 * {
@@ -8,90 +9,504 @@
           box-sizing: border-box;
 }
 
-body header {
-  /*------estilos de la pagina menu.html*/
-}
-
-body header img {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  z-index: -10;
-}
-
-body header div {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-body header .uno {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: rgba(6, 6, 6, 0.4);
-}
-
-body header p {
-  position: fixed;
-  color: #fff;
-}
-
-body header #pUno {
-  font-size: 6em;
-  font-family: "Rubik Moonrocks", cursive;
-  margin-top: -100px;
-}
-
-body header #pDos {
-  font-size: 2em;
-}
-
-body header #EnlaceAlMenu {
-  margin-top: 80px;
-  background-color: rgba(255, 253, 253, 0.486);
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-body header #EnlaceAlMenu:hover {
-  background-color: black;
-}
-
-body header #EnlaceAlMenu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2em;
-  border-bottom: 2px solid white;
-}
-
-body header .dos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: rgba(255, 253, 253, 0.4);
+@media screen and (min-width: 1000px) {
+  body {
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 75%;
+        grid-template-columns: 20% 75%;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "navbar  contenido ";
+    /*------estilos de la pagina menu.html*/
+    /*-------estilos para nav del menu--------*/
+  }
+  body img {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    z-index: -10;
+  }
+  body div {
+    width: 100%;
+    height: 100vh;
+  }
+  body .uno {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(6, 6, 6, 0.4);
+  }
+  body #p {
+    position: fixed;
+    color: #fff;
+  }
+  body #Uno {
+    font-size: 6em;
+    font-family: "Rubik Moonrocks", cursive;
+    margin-top: -100px;
+  }
+  body #Dos {
+    font-size: 2em;
+  }
+  body #EnlaceAlMenu {
+    margin-top: 80px;
+    background-color: rgba(255, 253, 253, 0.486);
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  body #EnlaceAlMenu:hover {
+    background-color: black;
+  }
+  body #EnlaceAlMenu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    border-bottom: 2px solid white;
+  }
+  body .dos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: navbar;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .content-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 97vh;
+  }
+  body .content-nav h1 {
+    margin: 20px auto 20px auto;
+    font-size: 3em;
+    font-family: "Rubik Moonrocks", cursive;
+    color: #126ce18a;
+  }
+  body .content-nav #subtitle {
+    display: inline-block;
+    margin-top: 0px;
+    font-size: 1.3em;
+    font-family: "Titillium Web", sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    color: #6bbe12;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: 40px;
+            backdrop-filter: 40px;
+  }
+  body .content-nav nav {
+    height: auto;
+  }
+  body .content-nav nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .content-nav nav ul li {
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -30px;
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: 10px;
+            backdrop-filter: 10px;
+    cursor: pointer;
+  }
+  body .content-nav nav ul li a {
+    border-radius: 50%;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100px;
+    height: 100px;
+    color: #6bbe12;
+    font-size: 3em;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body .content-nav nav ul li a:hover {
+    background-color: white;
+    color: rebeccapurple;
+  }
+  body .content-nav #nuestroServicios {
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(191, 234, 236, 0.6);
+    -webkit-backdrop-filter: 40px;
+            backdrop-filter: 40px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body .content-nav #nuestroServicios:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  body .content-nav #nuestroServicios a {
+    color: #126ce18a;
+    text-decoration: none;
+    font-family: "Rubik Moonrocks", cursive;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body .content-nav .iconRedes {
+    margin-top: 50px;
+    width: 90%;
+  }
+  body .content-nav .iconRedes ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .content-nav .iconRedes ul li {
+    margin: auto;
+    list-style: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  body .content-nav .iconRedes ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: 40px;
+            backdrop-filter: 40px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #6bbe12;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body .content-nav .iconRedes ul li a:hover {
+    background-color: rgba(27, 155, 224, 0.477);
+    color: white;
+  }
+  .contenidoProductos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: contenido;
+    width: 100%;
+    height: 95vh;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+    /*-------parte del menu dos*/
+  }
+  .contenidoProductos .menuDos {
+    width: 95%;
+    height: 15%;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contenidoProductos .menuDos div {
+    width: 70%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenidoProductos .menuDos div p {
+    font-size: 2em;
+    font-family: "Titillium Web", sans-serif;
+    color: #6bbe12;
+    font-weight: bold;
+  }
+  .contenidoProductos .menuDos div ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: 10px;
+            backdrop-filter: 10px;
+    border-radius: 5px;
+  }
+  .contenidoProductos .menuDos div ul li {
+    list-style: none;
+    margin: 5px auto;
+  }
+  .contenidoProductos .menuDos div ul li a {
+    text-decoration: none;
+    font-family: "Finlandica", sans-serif;
+    border-radius: 5px;
+    color: #126ce1eb;
+    -webkit-transition: .5s;
+    transition: .5s;
+    padding: 4px;
+  }
+  .contenidoProductos .menuDos div ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.734);
+  }
+  .contenidoProductos .menuDos .searhAndshoping {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contenidoProductos .menuDos .searhAndshoping a {
+    padding: 10px;
+  }
+  .contenidoProductos .menuDos .searhAndshoping a i {
+    font-size: 1.8em;
+    color: #126ce1eb;
+  }
+  .contenidoProductos .menuDos .searhAndshoping form {
+    padding: 5px;
+    background-color: rgba(255, 253, 253, 0.486);
+    border-radius: 5px;
+  }
+  .contenidoProductos .menuDos .searhAndshoping form label input {
+    background-color: rgba(255, 253, 253, 0.486);
+    font-size: 1rem;
+    margin: auto;
+  }
+  .contenidoProductos .menuDos .searhAndshoping form label i {
+    color: #6bbe12;
+    cursor: pointer;
+  }
+  .contenidoProductos .productos {
+    overflow: hidden;
+    width: 95%;
+    height: 80%;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    /*--------estilos para el contenido o articulos-----*/
+  }
+  .contenidoProductos .productos .cajas {
+    width: 100%;
+    height: 100%;
+  }
+  .contenidoProductos .productos ul li {
+    margin: 0;
+    padding: 0;
+  }
+  .contenidoProductos .productos .Dliquido {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenidoProductos .productos .Dliquido .articulo {
+    margin-top: 5px;
+    margin-left: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 18%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.816);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+  }
+  .contenidoProductos .productos .Dliquido .articulo .artiImagen {
+    border: 1px solid #ff0a0a;
+    width: 90%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+  }
+  .contenidoProductos .productos .Dliquido .articulo .artiImagen img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .contenidoProductos .productos .Dliquido .articulo .info {
+    width: 90%;
+    height: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+  }
+  .contenidoProductos .productos .Dliquido .articulo .info p {
+    font-size: 1rem;
+    font-family: "Finlandica", sans-serif;
+    text-align: center;
+  }
+  .contenidoProductos .productos .Dliquido .articulo .info .opcion {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenidoProductos .productos .Dliquido .articulo .info .opcion p i {
+    color: #126ce1eb;
+  }
+  .contenidoProductos .productos .Dpolvo {
+    background-color: #ffffff;
+  }
+  .contenidoProductos .productos .cloro {
+    background-color: #ffffff;
+  }
+  .contenidoProductos .productos .fabuloso {
+    background-color: #ffffff;
+  }
 }
 /*# sourceMappingURL=style.css.map */
