@@ -1,42 +1,137 @@
 @import "../archivosSCSS/variables";
 
-@media screen and(min-width: 1000px) {*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@media screen and(min-width: 300px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
     /*-----estilos del index----*/
+    
     .cajaMenu{
-        background: linear-gradient(45deg,rgb(228,228,228) 10%, rgb(36, 207, 241) 69%);
+        background-image:linear-gradient(45deg, rgba(133, 238, 123, 0.3)10% , rgba(180, 219, 238, 0.7) );
         display: flex;
         justify-content: center;
         align-items: center;
         width:100vw; 
         height: 100vh;
-        border: 1px solid red;
         text-align: center;
+        
         #uno{
-            font-size: $tamanoFuente + 7em;
+            font-size: $tamanoFuente + 2.8em;
             font-family: $fuenteMoonrocks;
-            color: $blueO;
+            color: black;
         }
         #dos{
-            font-size: $tamanoFuente + 1;
+            font-size: $tamanoFuente + .1 ;
             font-family: $finland;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            letter-spacing: 2px;
         }
         #enMenu{
             padding: 10px;
-            border: 2px solid $blueO;
             font-size: $tamanoFuente;
-            border-radius: 5px;
+            border-radius: 15px;
             margin-top: 30px;
-            background-color: $blue;
+            background-color: rgb(0, 0, 0, );
+            border: none;
             a{
                 text-decoration: none;
                 color: $colorTexto;
+                letter-spacing: 8px;
                
             }
             
         }
     }
+
+    /*---------footer---------*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+        height: 8vh;
+        position: absolute;
+        margin-top: -8vh;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: 40px;
+       div{
+           width: 45vw;
+           p{
+               font-size: 1.2em;
+               text-align: center;
+               color: white;
+           }
+          ul{
+              display: flex;
+              flex-direction: row;
+              margin-top: 8px;
+              li{
+                  margin: auto;
+                  list-style: none;
+                  a{
+                      color: white;
+                  }
+                  i{
+                      transition: .5s;
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                  }
+              }
+          }
+       }
+
+    }
+    /*--------MENU---------*/
+    .menuNav{
+        
+        border-bottom: 1px solid black;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        form{
+            margin: auto 0 auto auto;
+            input{
+                border: 1px solid black;  
+            }   
+            button{
+                background-color: white;
+                    i{
+                        color: black;
+                        
+                    }
+                }
+        }
+        ul{
+            margin: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            span{
+                border-bottom: 1px solid black;
+            }
+            li{
+                font-size: .7em;
+                list-style: none;
+                margin: auto;
+                
+            
+                a{
+                    color: rgb(0, 0, 0);
+                    text-decoration: none;
+                    transition: .5s;
+                    &:hover{
+                    border-bottom: 1px solid black;
+                }
+                }
+            }
+        }
+    }
+    
+
 }
