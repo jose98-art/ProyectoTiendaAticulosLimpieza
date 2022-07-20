@@ -72,12 +72,13 @@
             backdrop-filter: 40px;
   }
   footer div {
-    width: 45vw;
+    width: 100vw;
   }
   footer div p {
     font-size: 1.2em;
     text-align: center;
     color: white;
+    letter-spacing: 4px;
   }
   footer div ul {
     display: -webkit-box;
@@ -88,9 +89,10 @@
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 8px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   footer div ul li {
-    margin: auto;
     list-style: none;
   }
   footer div ul li a {
@@ -106,6 +108,7 @@
   }
   /*--------MENU---------*/
   .menuNav {
+    margin-top: 10px;
     border-bottom: 1px solid black;
     height: 10vh;
     display: -webkit-box;
@@ -119,16 +122,30 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .menuNav form {
-    margin: auto 0 auto auto;
+  .menuNav div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .menuNav form input {
+  .menuNav div form input {
     border: 1px solid black;
   }
-  .menuNav form button {
+  .menuNav div form button {
     background-color: white;
   }
-  .menuNav form button i {
+  .menuNav div form button i {
+    color: black;
+  }
+  .menuNav div button {
+    background-color: white;
+  }
+  .menuNav div button a {
     color: black;
   }
   .menuNav ul {

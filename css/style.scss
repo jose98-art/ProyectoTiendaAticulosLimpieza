@@ -59,18 +59,20 @@
         background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: 40px;
        div{
-           width: 45vw;
+           width: 100vw;
            p{
                font-size: 1.2em;
                text-align: center;
                color: white;
+               letter-spacing: 4px;
            }
           ul{
               display: flex;
               flex-direction: row;
               margin-top: 8px;
+              justify-content: space-around;
+
               li{
-                  margin: auto;
                   list-style: none;
                   a{
                       color: white;
@@ -88,24 +90,36 @@
     }
     /*--------MENU---------*/
     .menuNav{
-        
+        margin-top: 10px;
         border-bottom: 1px solid black;
         height: 10vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        form{
-            margin: auto 0 auto auto;
-            input{
-                border: 1px solid black;  
-            }   
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            form{
+                input{
+                    border: 1px solid black;  
+                }   
+                button{
+                    background-color: white;
+                        i{
+                            color: black;
+                            
+                        }
+                    }
+            }
             button{
                 background-color: white;
-                    i{
-                        color: black;
-                        
-                    }
+                a{
+                    
+                    color: black;
                 }
+                
+            }
         }
         ul{
             margin: auto;
@@ -133,5 +147,6 @@
         }
     }
     
+   
 
 }
