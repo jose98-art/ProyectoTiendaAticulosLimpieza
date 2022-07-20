@@ -90,13 +90,18 @@
     }
     /*--------MENU---------*/
     .menuNav{
-        margin-top: 10px;
+        position: fixed;
+        width: 100vw;
+        height: 15vh;
         border-bottom: 1px solid black;
-        height: 10vh;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: rgba(255, 255, 255, 0.925);
+        backdrop-filter: 20px;
         div{
+            margin-top:20px ;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -145,6 +150,80 @@
                 }
             }
         }
+    }
+    .content-navdos{
+        position: fixed;
+        margin-top: 15vh;
+        width: 100vw;
+        height: 5vh;
+        background-color: rgba(255, 255, 255, 0.925);
+        backdrop-filter: 20px;
+        border-bottom: 1px solid black;
+
+        .navdos{
+            height: 100%;
+            ul{
+                padding:0 5px 0 5px;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                li{
+                    list-style: none;
+                    font-size: .7em;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                }
+            }
+        }
+        
+    }
+    .articulos{
+        z-index: -10;
+        position:absolute;
+        width: 100vw;
+        height: auto;
+        margin-top: 20vh;
+        .secART{
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .nombre-cate{
+                position: absolute;
+            }
+            .content-image{
+                width: 40%;
+                margin: 40px auto;
+                img{
+                    width: 100%;
+                    height: auto;
+
+                }
+                .description{
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        font-size: .6em;
+                    }
+                    a{
+                        background-color: red;
+                        i{
+                            font-size: 1rem;
+                            color:white;
+                        }
+                    }
+                }
+            }
+
+        }
+
     }
     
    
