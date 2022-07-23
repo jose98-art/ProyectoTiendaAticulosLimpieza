@@ -139,19 +139,33 @@
         justify-content: space-around;
   }
   .menuNav div form input {
-    border: 1px solid black;
+    border-radius: 20px;
+    outline: none;
   }
-  .menuNav div form button {
+  .menuNav div form .search {
     background-color: white;
+    border: none;
+    margin-left: 5px;
+    font-size: 1.3rem;
   }
-  .menuNav div form button i {
+  .menuNav div form .search i {
     color: black;
   }
-  .menuNav div button {
-    background-color: white;
+  .menuNav div .shopping {
+    background-color: #000000;
+    border: none;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
   }
-  .menuNav div button a {
-    color: black;
+  .menuNav div .shopping:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .menuNav div .shopping a {
+    color: white;
   }
   .menuNav ul {
     margin: auto;
@@ -165,7 +179,7 @@
             flex-direction: row;
   }
   .menuNav ul span {
-    border-bottom: 1px solid black;
+    border-bottom: 1.5px solid #28aac1;
   }
   .menuNav ul li {
     font-size: .7em;
@@ -173,6 +187,7 @@
     margin: auto;
   }
   .menuNav ul li a {
+    text-align: center;
     color: black;
     text-decoration: none;
     -webkit-transition: .5s;
@@ -185,18 +200,13 @@
     position: fixed;
     margin-top: 15vh;
     width: 100vw;
-    height: 5vh;
+    height: 4vh;
     background-color: rgba(255, 255, 255, 0.925);
     -webkit-backdrop-filter: 20px;
             backdrop-filter: 20px;
     border-bottom: 1px solid black;
   }
   .content-navdos .navdos {
-    height: 100%;
-  }
-  .content-navdos .navdos ul {
-    padding: 0 5px 0 5px;
-    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -204,22 +214,19 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    padding: 0;
   }
-  .content-navdos .navdos ul li {
-    list-style: none;
+  .content-navdos .navdos a {
+    margin: auto;
+    height: 100%;
+    padding: 6px;
     font-size: .7em;
-  }
-  .content-navdos .navdos ul li a {
     text-decoration: none;
     color: black;
+    text-align: center;
+  }
+  .content-navdos .navdos a:hover {
+    background-color: #f0f0f0;
   }
   .articulos {
     z-index: -10;
@@ -242,6 +249,10 @@
         flex-wrap: wrap;
   }
   .articulos .secART .nombre-cate {
+    background-color: black;
+    color: white;
+    padding: 3px 15px;
+    border-radius: 30px;
     position: absolute;
   }
   .articulos .secART .content-image {
