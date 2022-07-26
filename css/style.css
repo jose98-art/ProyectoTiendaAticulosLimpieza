@@ -22,7 +22,7 @@
         -ms-flex-align: center;
             align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
     text-align: center;
   }
   .cajaMenu #uno {
@@ -44,6 +44,7 @@
     margin-top: 30px;
     background-color: black;
     border: none;
+    outline: none;
   }
   .cajaMenu #enMenu a {
     text-decoration: none;
@@ -89,8 +90,9 @@
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 8px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   footer div ul li {
     list-style: none;
@@ -205,6 +207,7 @@
     -webkit-backdrop-filter: 20px;
             backdrop-filter: 20px;
     border-bottom: 1px solid black;
+    overflow: scroll;
   }
   .content-navdos .navdos {
     display: -webkit-box;
@@ -214,16 +217,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 0;
+    padding: auto;
+    width: 200%;
+    overflow-x: scroll;
   }
   .content-navdos .navdos a {
     margin: auto;
     height: 100%;
-    padding: 6px;
-    font-size: .7em;
+    padding: 5px;
+    font-size: .8em;
     text-decoration: none;
     color: black;
-    text-align: center;
+    width: auto;
   }
   .content-navdos .navdos a:hover {
     background-color: #f0f0f0;
@@ -282,5 +287,6 @@
     font-size: 1rem;
     color: white;
   }
+  /*-------------Quimicos------*/
 }
 /*# sourceMappingURL=style.css.map */
